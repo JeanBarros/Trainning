@@ -1,0 +1,4 @@
+# Remove a Política de Execução atual, seja ela qual for, a não ser que esta política esteja definida no escopo de uma
+Set-ExecutionPolicy Unrestricted
+
+fonte: https://social.technet.microsoft.com/wiki/pt-br/contents/articles/29932.como-habilitar-a-execucao-de-scripts-em-powershell.aspx
