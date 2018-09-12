@@ -1,0 +1,57 @@
+Funções que estavam na primeira versão do código para tratar do agendamento da sala bem estar
+
+// Adiciona no array o nome da função retornada da lista de profissionais através da CamlQuery
+        // Mais de um profissional pode executar a mesma função
+        for (i = 0; i < funcaoDoProfissional.length; i++) {
+    		
+    		arrFuncoes[i] = funcaoDoProfissional[i];
+    		//$(".detalhesDoProfissional").append('<li>' + funcaoDoProfissional[i] + '</li>');     					  		
+		}
+		
+		// Remove os itens que não sejam iguais a função selecionada no dropDown de funções	   
+	   	var totalFuncoes = arrFuncoes.length;
+	   
+	    for (i = 0; i < totalFuncoes; i++){
+		   for (j = 0; j < arrFuncoes.length; j++) {
+	    		
+	    		if (arrFuncoes[j] != funcaoSelecionada)
+	    			arrFuncoes.splice(j, 1);
+			}
+			
+			if (arrFuncoes.length == 1)
+	    		break;
+		 }		
+		
+		// Compara a função selecionada com as funções da lista de profissionais
+	   	// então retorna o nome dos profissionais coincidentes
+	   	for (i = 0; i < funcaoDoProfissional.length; i++) {
+    		if (funcaoSelecionada == funcaoDoProfissional[i]){
+    		
+    			var profissional = nomeDoProfissional[i];
+				
+				//$('#ui-id-1').html(profissional)
+    			//$(".listaProfissionais select").append('<option value="' + (i + 1) + '">' + profissional + '</option>');	
+    						
+    		}
+    	}
+
+// Remove valores duplicados do dropdown de funções
+function RemoverItensDuplicados () {
+	
+    var usedNames = {};
+	$(".listaFuncoes option").each(function () {
+	    if(usedNames[this.text]) {
+	        $(this).remove();
+	    } 
+	    else {
+	        usedNames[this.text] = this.value;
+	    }
+	});
+}
+
+// Remove todos os itens do dropDown que será populado dinamicamente 
+//com os profissionais relacionados a função escolhida
+function LimparDropDownProfissionais () {
+	$(".listaProfissionais option").remove(); 
+	$(".listaProfissionais select").prepend('<option value="0"> (Nenhum) </option>');
+}

@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html debug="true">
+<head>
+<meta charset="utf-8">
+<title>Skidder jQuery Plugin Demo</title>
+<link rel="stylesheet" href="src/jquery.skidder.css">
+<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script> -->
+<!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"> -->
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/slider/Auto-Scalable-Responsive-Image-Carousel-Plugin-For-jQuery-skidder.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<h1 style="margin:150px auto 100px auto" align="center">Skidder jQuery Plugin Demo</h1>
+<div class="slideshow" style="height: 0; overflow: hidden">
+<div class="slide"><img src="./images/1000x400_b.png"></div>
+<div class="slide"><img src="./images/300x500_p.png"></div>
+<div class="slide"><img src="./images/500x300_y.png"></div>
+<div class="slide"><img src="./images/300x500_p.png"></div>
+<!-- <div class="slide"><img src="./images/500x100_y.png"></div> --> 
+<!--       <div class="slide"><img src="./images/500x300_b.png"></div>
+      <div class="slide"><img src="./images/500x300_g.png"></div>
+      <div class="slide"><img src="./images/500x300_r.png"></div>
+      <div class="slide"><img src="./images/500x300_y.png"></div> --> 
+</div>
+
+<!--     <div class="slideshow-nocycle" style="height: 0; overflow: hidden">
+      <div class="slide"><img src="./images/1000x400_b.png"></div>
+      <div class="slide"><img src="./images/300x500_p.png"></div>
+      <div class="slide"><img src="./images/500x300_y.png"></div>
+      <div class="slide"><img src="./images/300x500_p.png"></div>
+    </div> --> 
+
+<!--     <div class="slideshow">
+
+      <div class="slide" style="background: green;">Text 1</div>
+      <div class="slide" style="background: red;">Text 2</div>
+      <div class="slide" style="background: yellow;">Text 3</div>
+      <div class="slide" style="background: blue;">Text 4</div>
+
+    </div> -->
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="lib/imagesloaded.js"></script>
+<script src="lib/smartresize.js"></script>
+<script src="src/jquery.skidder.js"></script>
+<script>
+    $('.slideshow').each( function() {  
+      var $slideshow = $(this);
+      $slideshow.imagesLoaded( function() {
+        $slideshow.skidder({
+          slideClass    : '.slide',
+          scaleSlides   : true,
+          maxSlideWidth : 1300,
+          maxSlideHeight: 500,
+          leftaligned   : false,
+          cycle         : true,
+          paging        : true,
+          swiping       : true,
+          jumpback      : false,
+          speed         : 400,
+          autoplay      : false,
+          interval      : 4000
+        });
+      });
+    });
+
+    // $('.slideshow-nocycle').each( function() {  
+    //   var $slideshow = $(this);
+    //   $slideshow.imagesLoaded( function() {
+    //     $slideshow.skidder({
+    //       slideClass    : '.slide',
+    //       scaleSlides   : true,
+    //       maxSlideWidth : 1300,
+    //       maxSlideHeight: 500,
+    //       leftaligned   : true,
+    //       cycle         : false,
+    //       paging        : true,
+    //       swiping       : true,
+    //       jumpback      : false,
+    //       speed         : 400,
+    //       autoplay      : false,
+    //       interval      : 4000
+    //     });
+    //   });
+    // });
+    
+    $(window).smartresize(function(){
+      $('.slideshow').skidder('resize');
+    });
+
+  </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<html>

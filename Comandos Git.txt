@@ -1,0 +1,17 @@
+Enviar os arquivos de uma pasta do Windows para um repositório remoto no Github
+$ git init
+$ git status (opcional)
+$ git add . (adiciona todo o conteúdo da pasta)
+$ git add file1 file2 (adiciona apenas os arquivos especificados)
+$ git status (opcional)
+$ git commit -m 'Versão inicial'
+$ git status (opcional)
+$ git remote add origin https://github.com/JeanBarros/Trainning.git (somente na primeir vez ao criar o repositorio)
+$ git push -u origin master
+
+
+Clonar (baixar) um repositório remoto do Github para o Windows
+GitBash na pasta desejada e executar.
+$ git clone https://github.com/JeanBarros/Xamarin.git
+
+

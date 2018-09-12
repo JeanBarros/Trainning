@@ -1,0 +1,16 @@
+var src = $("#profissionaisBemEstar").attr('src');
+
+
+#ms-designer-ribbon, .ms-webpart-chrome-title,
+
+
+str.replace(/\s/g, "X");
+
+
+<PublishingWebControls:EditModePanel runat="server" id="IncludeEditModeClass" > 
+    <asp:Content>
+        <script type="text/javascript">
+                document.documentElement.className += ' edit-mode';
+        </script>
+    </asp:Content> 
+</PublishingWebControls:EditModePanel>
